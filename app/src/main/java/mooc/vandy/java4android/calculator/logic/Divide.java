@@ -5,8 +5,10 @@ package mooc.vandy.java4android.calculator.logic;
  */
 public class Divide extends Operation {
     @Override
-    protected double compute(double argumentOne, double argumentTwo) {
-        return argumentOne / argumentTwo;
+    protected String compute(int argumentOne, int argumentTwo) {
+        return String.valueOf(argumentOne / argumentTwo)
+                + " R: "
+                + String.valueOf(argumentOne % argumentTwo);
     }
 
     /**

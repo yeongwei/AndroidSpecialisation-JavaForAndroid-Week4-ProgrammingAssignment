@@ -35,9 +35,8 @@ public class Logic
                         int argumentTwo,
                         int operation) {
         try {
-            mOut.print(String.valueOf(
-                    OperationFactory.create(OperationType.getType(operation))
-                            .invoke(argumentOne, argumentTwo)));
+            mOut.print(OperationFactory.create(OperationType.getType(operation))
+                    .invoke(argumentOne, argumentTwo));
         } catch (Exception ex) {
             mOut.print(ex.getMessage());
         }

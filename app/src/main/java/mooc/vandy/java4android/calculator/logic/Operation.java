@@ -11,25 +11,14 @@ abstract class Operation {
      * @param argumentTwo
      * @return
      */
-    public double invoke(int argumentOne, int argumentTwo) {
+    public String invoke(int argumentOne, int argumentTwo) {
         if (isValidInput(argumentOne, argumentTwo))
             return compute(argumentOne, argumentTwo);
         else
             throw new RuntimeException("Invalid input arguments");
     }
 
-    /**
-     * Cast all incoming integer into double
-     *
-     * @param argumentOne
-     * @param argumentTwo
-     * @return
-     */
-    private double compute(int argumentOne, int argumentTwo) {
-        return compute((double) argumentOne, (double) argumentTwo);
-    }
-
-    abstract protected double compute(double argumentOne, double argumentTwo);
+    abstract protected String compute(int argumentOne, int argumentTwo);
 
     /**
      * Check if inputs are valid
